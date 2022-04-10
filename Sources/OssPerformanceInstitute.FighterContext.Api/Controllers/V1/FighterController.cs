@@ -8,7 +8,7 @@ namespace OssPerformanceInstitute.FighterContext.Api.Controllers.V1
     [ApiController]
     [ApiVersion("1.0")]
     [Route("api/v{version:apiVersion}/[controller]")]
-    public class FighterController :ControllerBase
+    public class FighterController : ControllerBase
     {
         private readonly FighterApplicationService _fighterApplicationService;
         private readonly ILogger<FighterController> _logger;
@@ -36,8 +36,8 @@ namespace OssPerformanceInstitute.FighterContext.Api.Controllers.V1
         }
 
         [MapToApiVersion("1.0")]
-        [HttpPost("flagforfight")]
-        public async Task<IActionResult> Post(FlagForFightCommand command)
+        [HttpPost("flagfortrain")]
+        public async Task<IActionResult> Post(FlagForTrainCommand command)
         {
             try
             {

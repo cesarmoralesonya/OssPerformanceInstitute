@@ -26,7 +26,21 @@ namespace OssPerformanceInstitute.SharedKernel.Common.Extensions
             services.ConfigureOptions<ConfigureSwaggerOptions>();
         }
 
-        public static void UseApiVersioningSwaggerUI(this IApplicationBuilder app)
+        public static void AddSwaggerGenVersioningPolicy(this IServiceCollection services, string serviceName, string serviceDescription)
+        {
+            services.AddSwaggerGen(c =>
+            {
+                var swaggerVersions = c.SwaggerGeneratorOptions.SwaggerDocs;
+                foreach (var swaggerVersion in swaggerVersions)
+                {
+                    swaggerVersion.Value.Title = serviceName;
+                    swaggerVersion.Value.Description = serviceDescription;
+                }
+                c.SwaggerGeneratorOptions.SwaggerDocs = swaggerVersions;
+            });
+        }
+        
+        public static void UseSwaggerUIVersioningPolicy(this IApplicationBuilder app)
         {
             var provider = app.ApplicationServices.GetRequiredService<IApiVersionDescriptionProvider>();
             app.UseSwaggerUI(options =>

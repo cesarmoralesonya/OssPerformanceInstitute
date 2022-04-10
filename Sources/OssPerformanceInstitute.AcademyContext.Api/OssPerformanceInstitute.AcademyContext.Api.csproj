@@ -6,16 +6,8 @@
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
 
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
-    <Optimize>False</Optimize>
-  </PropertyGroup>
-
   <ItemGroup>
-    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <ProjectReference Include="..\OssPerformanceInstitute.FighterContext.Domain\OssPerformanceInstitute.FighterContext.Domain.csproj" />
+    <ProjectReference Include="..\OssPerformanceInstitute.AcademyContext.Domain\OssPerformanceInstitute.AcademyContext.Domain.csproj" />
     <ProjectReference Include="..\OssPerformanceInstitute.SharedKernel.Infrastructure\OssPerformanceInstitute.SharedKernel.Infrastructure.csproj" />
   </ItemGroup>
 

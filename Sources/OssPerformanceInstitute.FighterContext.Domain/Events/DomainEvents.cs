@@ -4,7 +4,7 @@ namespace OssPerformanceInstitute.FighterContext.Domain.Events
 {
     public static class DomainEvents
     {
-        public static DomainEvent<FighterFlaggedForFight> FighterFlaggedForFight = new();
-        public static DomainEvent<FighterTransferredToHospital> FighterTransferredToHospital = new();
+        public static readonly DomainEvent<FighterFlaggedForTrain> FighterFlaggedForTrain = new();
+        public static readonly DomainEvent<FighterTransferredToHospital> FighterTransferredToHospital = new();
     }
 }

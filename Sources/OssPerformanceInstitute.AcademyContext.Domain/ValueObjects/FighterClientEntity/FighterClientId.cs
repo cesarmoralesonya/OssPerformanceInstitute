@@ -1,23 +1,23 @@
 ﻿
-namespace OssPerformanceInstitute.FighterContext.Domain.ValueObjets
+namespace OssPerformanceInstitute.AcademyContext.Domain.ValueObjects.FighterClientEntity
 {
-    public record FighterId
+    public record FighterClientId
     {
         public Guid Value { get; init; }
-        internal FighterId(Guid value)
+        internal FighterClientId(Guid value)
         {
             Value = value;
         }
 
-        public static FighterId Create(Guid value)
+        public static FighterClientId Create(Guid value)
         {
             Validate(value);
-            return new FighterId(value);
+            return new FighterClientId(value);
         }
 
-        public static implicit operator Guid(FighterId FighterId)
+        public static implicit operator Guid(FighterClientId petId)
         {
-            return FighterId.Value;
+            return petId.Value;
         }
 
         private static void Validate(Guid value)

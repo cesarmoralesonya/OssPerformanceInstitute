@@ -4,19 +4,19 @@
     "windowsAuthentication": false,
     "anonymousAuthentication": true,
     "iisExpress": {
-      "applicationUrl": "http://localhost:16417",
-      "sslPort": 44323
+      "applicationUrl": "http://localhost:63842",
+      "sslPort": 44396
     }
   },
   "profiles": {
-    "OssPerformanceInstitute.FighterContext.Api": {
+    "OssPerformanceInstitute.AcademyContext.Api": {
       "commandName": "Project",
       "launchBrowser": true,
       "launchUrl": "swagger",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       },
-      "applicationUrl": "https://localhost:4641;http://localhost:2641",
+      "applicationUrl": "https://localhost:7292;http://localhost:5292",
       "dotnetRunMessages": true
     }
   }

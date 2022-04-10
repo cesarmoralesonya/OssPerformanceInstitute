@@ -1,5 +1,5 @@
 ﻿
 namespace OssPerformanceInstitute.FighterContext.Api.Commands
 {
-    public record FlagForFightCommand(Guid Id);
+    public record FlagForTrainCommand(Guid Id);
 }

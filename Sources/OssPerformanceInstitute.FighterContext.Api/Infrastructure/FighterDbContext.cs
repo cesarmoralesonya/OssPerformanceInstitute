@@ -21,13 +21,21 @@ namespace OssPerformanceInstitute.FighterContext.Api.Infrastructure
                                             .ValueGeneratedOnAdd()
                                             .HasColumnName("pk_fighter_id");
 
-            modelBuilder.Entity<Fighter>().OwnsOne(x => x.Name);
+            modelBuilder.Entity<Fighter>().OwnsOne(x => x.Name)
+                                            .Property(p=>p.Value).HasColumnName("name");
 
-            modelBuilder.Entity<Fighter>().OwnsOne(x => x.SexOfFighter);
+            modelBuilder.Entity<Fighter>().OwnsOne(x => x.SexOfFighter)
+                                            .Property(t=>t.Value).HasColumnName("sex");
 
-            modelBuilder.Entity<Fighter>().OwnsOne(x => x.Citizenship);
+            modelBuilder.Entity<Fighter>().OwnsOne(x => x.Citizenship, add =>
+            {
+                add.Property(p => p.Country).HasColumnName("country");
+                add.Property(p => p.City).HasColumnName("city");
+            });
 
-            modelBuilder.Entity<Fighter>().OwnsOne(x => x.DateOfBirth);
+            modelBuilder.Entity<Fighter>().OwnsOne(x => x.DateOfBirth)
+                                            .Property(p => p.Value)
+                                            .HasColumnName("date_birth");
         }
     }
 }

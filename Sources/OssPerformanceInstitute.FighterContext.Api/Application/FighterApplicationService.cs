@@ -28,16 +28,16 @@ namespace OssPerformanceInstitute.FighterContext.Api.Application
             this._configuration = configuration ?? throw new ArgumentNullException(nameof(configuration));
             this._logger = logger ?? throw new ArgumentNullException(nameof(logger));
 
-            DomainEvents.FighterFlaggedForFight.Register(async fighter =>
+            DomainEvents.FighterFlaggedForTrain.Register(async fighter =>
             {
-                var integrationEvent = new FighterFlaggedForFightIntegrationEvent(fighter.Id,
+                var integrationEvent = new FighterFlaggedForTrainIntegrationEvent(fighter.Id,
                                                                                     fighter.Name,
                                                                                     fighter.Country,
                                                                                     fighter.City,
                                                                                     fighter.Sex,
                                                                                     fighter.DateOfBirth);
 
-                await PublishIntegrationEventAsync(integrationEvent, configuration["ServicesBus:ConnectionString"], configuration["ServicesBus:Fight:TopicName"]);
+                await PublishIntegrationEventAsync(integrationEvent, configuration["ServicesBus:ConnectionString"], configuration["ServicesBus:Train:TopicName"]);
             });
         }
 
@@ -61,7 +61,7 @@ namespace OssPerformanceInstitute.FighterContext.Api.Application
             }
         }
 
-        public async Task HandleCommandAsync(FlagForFightCommand command, CancellationToken cancellationToken = default)
+        public async Task HandleCommandAsync(FlagForTrainCommand command, CancellationToken cancellationToken = default)
         {
             try
             {
@@ -70,7 +70,7 @@ namespace OssPerformanceInstitute.FighterContext.Api.Application
                 if (fighter == null)
                     throw new FighterNotFoundException(command.Id);
 
-                fighter?.FlagForFight();
+                fighter?.FlagForTrain();
             }
             catch (Exception ex)
             {

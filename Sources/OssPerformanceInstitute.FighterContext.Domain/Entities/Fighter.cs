@@ -40,10 +40,10 @@ namespace OssPerformanceInstitute.FighterContext.Domain.Entities
             DateOfBirth = dateOfBirth;
         }
 
-        public void FlagForFight()
+        public void FlagForTrain()
         {
-            ValidateStateForFight();
-            DomainEvents.FighterFlaggedForFight.Publish(new FighterFlaggedForFight(Id, Name, Citizenship.Country, Citizenship.City, SexOfFighter, DateOfBirth));
+            ValidateStateForTrain();
+            DomainEvents.FighterFlaggedForTrain.Publish(new FighterFlaggedForTrain(Id, Name, Citizenship.Country, Citizenship.City, SexOfFighter, DateOfBirth));
         }
 
         public void TransferToHospital()
@@ -52,7 +52,7 @@ namespace OssPerformanceInstitute.FighterContext.Domain.Entities
             DomainEvents.FighterTransferredToHospital.Publish(new FighterTransferredToHospital(Id, Name, Citizenship.Country, Citizenship.City, SexOfFighter, DateOfBirth));
         }
 
-        private void ValidateStateForFight()
+        private void ValidateStateForTrain()
         {
             if (Name == null)
                 throw new InvalidFighterStateException("Name is missing");
