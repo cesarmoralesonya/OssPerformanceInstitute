@@ -6,8 +6,13 @@ using OssPerformanceInstitute.SharedKernel.Common.Options;
 
 namespace OssPerformanceInstitute.SharedKernel.Common.Extensions
 {
-    public static class ApiVersioningExtensions
+    public static class ApiPolicyExtensions
     {
+        public static void AddApiPathPolicy(this IServiceCollection services)
+        {
+            services.AddRouting(setup => setup.LowercaseUrls = true);
+        }
+
         public static void AddApiVersioningPolicy(this IServiceCollection services)
         {
             services.AddApiVersioning(setup =>

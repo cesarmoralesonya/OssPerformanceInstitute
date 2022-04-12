@@ -19,6 +19,7 @@ builder.Services.AddScoped<FighterApplicationService>();
 
 builder.Services.AddControllers();
 
+builder.Services.AddApiPathPolicy();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddApiVersioningPolicy();
 builder.Services.AddSwaggerGenVersioningPolicy(SERVICENAME, SERVICEDESCRIPTION);

@@ -5,6 +5,7 @@ using OssPerformanceInstitute.AcademyContext.Domain.Events;
 using OssPerformanceInstitute.AcademyContext.Api.Commands;
 using OssPerformanceInstitute.AcademyContext.Domain.Entities;
 using System.Reflection;
+using OssPerformanceInstitute.AcademyContext.Domain.Exceptions;
 
 namespace OssPerformanceInstitute.AcademyContext.Api.Application
 {
@@ -45,6 +46,26 @@ namespace OssPerformanceInstitute.AcademyContext.Api.Application
                     command.Questionnaire.IsMmaTrainner));
 
                 return await _trainerRepository.AddAsync(trainer);
+            }
+            catch (Exception ex)
+            {
+                var errorMessage = $"{GetType().Name} {MethodBase.GetCurrentMethod()?.Name} Ex: {(ex.InnerException ?? ex).Message}";
+                _logger.LogError(errorMessage);
+                throw;
+            }
+        }
+
+        public async Task HandleCommandAsync(RequestTrainingCommand command)
+        {
+
+            try
+            {
+                var trainer = await _trainerRepository.GetByIdAsync(TrainerId.Create(command.TrainerId));
+                if (trainer == null)
+                    throw new TrainerNotFoundExeption(command.TrainerId);
+
+                trainer.RequestToTraining(FighterClientId.Create(command.FighterClientId));
+                await _trainerRepository.UpdateAsync(trainer);
             }
             catch (Exception ex)
             {

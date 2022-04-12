@@ -70,7 +70,7 @@ namespace OssPerformanceInstitute.FighterContext.Api.Application
                 if (fighter == null)
                     throw new FighterNotFoundException(command.Id);
 
-                fighter?.FlagForTrain();
+                fighter.FlagForTrain();
             }
             catch (Exception ex)
             {

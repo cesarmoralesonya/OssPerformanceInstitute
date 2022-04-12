@@ -35,5 +35,28 @@ namespace OssPerformanceInstitute.AcademyContext.Api.Controllers.V1
                 return BadRequest(errorMessage);
             }
         }
+
+        [MapToApiVersion("1.0")]
+        [HttpPost("requesttraining")]
+        public async Task<IActionResult> Post(RequestTrainingCommand command)
+        {
+            try
+            {
+                if (command == null)
+                    return BadRequest("Command can not be null");
+
+                await _academyApplicationService.HandleCommandAsync(command);
+
+                return Ok();
+
+            }
+            catch (Exception ex)
+            {
+                var errorMessage = $"{GetType().Name} {MethodBase.GetCurrentMethod()?.Name} Ex: {(ex.InnerException ?? ex).Message}";
+                _logger.LogError(errorMessage);
+
+                return BadRequest(errorMessage);
+            }
+        }
     }
 }
