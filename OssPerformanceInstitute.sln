@@ -25,6 +25,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OssPerformanceInstitute.Fig
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OssPerformanceInstitute.FighterBoundary.Api", "Sources\OssPerformanceInstitute.FighterBoundary.Api\OssPerformanceInstitute.FighterBoundary.Api.csproj", "{11DEB85C-257E-4A7F-96C0-0F4E93CCD4E5}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OssPerformanceInstitute.HospitalBoundary.Domain", "Sources\OssPerformanceInstitute.HospitalBoundary.Domain\OssPerformanceInstitute.HospitalBoundary.Domain.csproj", "{06C9D91E-2F25-4225-A2AD-A22B18647760}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -59,6 +61,10 @@ Global
 		{11DEB85C-257E-4A7F-96C0-0F4E93CCD4E5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{11DEB85C-257E-4A7F-96C0-0F4E93CCD4E5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{11DEB85C-257E-4A7F-96C0-0F4E93CCD4E5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{06C9D91E-2F25-4225-A2AD-A22B18647760}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{06C9D91E-2F25-4225-A2AD-A22B18647760}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{06C9D91E-2F25-4225-A2AD-A22B18647760}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{06C9D91E-2F25-4225-A2AD-A22B18647760}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -71,6 +77,7 @@ Global
 		{2E335206-9257-4AEA-9AC6-143FCBE9C788} = {EBBBA861-1F33-492C-A726-6C96B7A37D9B}
 		{2FC81E29-34A7-4CAA-ABE0-197F6C1E6A4A} = {1F240B1B-4708-40DA-8CE9-508A7FDF4A4A}
 		{11DEB85C-257E-4A7F-96C0-0F4E93CCD4E5} = {1F240B1B-4708-40DA-8CE9-508A7FDF4A4A}
+		{06C9D91E-2F25-4225-A2AD-A22B18647760} = {7BB83EEE-1849-4A2B-8585-8C63694F9640}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {8C61201F-26C0-44EC-98D8-5380254139FB}
