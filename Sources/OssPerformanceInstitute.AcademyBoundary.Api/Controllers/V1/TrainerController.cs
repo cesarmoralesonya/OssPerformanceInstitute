@@ -8,12 +8,12 @@ namespace OssPerformanceInstitute.AcademyBoundary.Api.Controllers.V1
     [ApiController]
     [ApiVersion("1.0")]
     [Route("api/v{version:apiVersion}/[Controller]")]
-    public class AcademyController : ControllerBase
+    public class TrainerController : ControllerBase
     {
-        private readonly AcademyApplicationService _academyApplicationService;
-        private readonly ILogger<AcademyController> _logger;
+        private readonly TrainerApplicationService _academyApplicationService;
+        private readonly ILogger<TrainerController> _logger;
 
-        public AcademyController(AcademyApplicationService cademyApplicationService, ILogger<AcademyController> logger)
+        public TrainerController(TrainerApplicationService cademyApplicationService, ILogger<TrainerController> logger)
         {
             _academyApplicationService = cademyApplicationService ?? throw new ArgumentNullException(nameof(cademyApplicationService));
             _logger = logger ?? throw new ArgumentNullException(nameof(logger));

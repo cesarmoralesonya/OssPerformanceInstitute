@@ -9,11 +9,11 @@ using OssPerformanceInstitute.AcademyBoundary.Domain.Exceptions;
 
 namespace OssPerformanceInstitute.AcademyBoundary.Api.Application
 {
-    public class AcademyApplicationService
+    public class TrainerApplicationService
     {
         private readonly ITrainerRepository _trainerRepository;
-        private readonly ILogger<AcademyApplicationService> _logger;
-        public AcademyApplicationService(ILogger<AcademyApplicationService> logger,
+        private readonly ILogger<TrainerApplicationService> _logger;
+        public TrainerApplicationService(ILogger<TrainerApplicationService> logger,
                                             ITrainerRepository trainerRepository,
                                             IServiceScopeFactory serviceScopeFactory)
         {

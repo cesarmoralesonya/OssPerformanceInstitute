@@ -7,7 +7,7 @@ using OssPerformanceInstitute.SharedKernel.Infrastructure.Extensions;
 
 var builder = WebApplication.CreateBuilder(args);
 const string SERVICENAME = "Fighter.Api";
-const string SERVICEDESCRIPTION = "Microservice of fighter domain context";
+const string SERVICEDESCRIPTION = "Microservice of fighter domain boundary";
 
 
 // Add services to the container.

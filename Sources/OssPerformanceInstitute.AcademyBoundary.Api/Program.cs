@@ -7,7 +7,7 @@ using OssPerformanceInstitute.SharedKernel.Infrastructure.Extensions;
 
 var builder = WebApplication.CreateBuilder(args);
 const string SERVICENAME = "Academy.Api";
-const string SERVICEDESCRIPTION = "Microservice of academy domain context";
+const string SERVICEDESCRIPTION = "Microservice of academy domain boundary";
 
 // Add services to the container.
 builder.Services.AddDbSqlServerByConnectionString<AcademyDbContext>(builder.Configuration, "Academy");
@@ -15,7 +15,7 @@ builder.Services.AddEfRepository();
 builder.Services.AddScoped<ITrainerRepository, TrainerRepository>();
 builder.Services.AddScoped<IFighterClientRepository, FighterClientRepository>();
 builder.Services.AddHostedService<FighterFlagedForTrainIntegrationEventHandler>();
-builder.Services.AddScoped<AcademyApplicationService>();
+builder.Services.AddScoped<TrainerApplicationService>();
 
 builder.Services.AddControllers();
 

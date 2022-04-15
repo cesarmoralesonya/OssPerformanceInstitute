@@ -39,6 +39,16 @@ namespace OssPerformanceInstitute.FighterBoundary.Api.Application
 
                 await PublishIntegrationEventAsync(integrationEvent, configuration["ServicesBus:ConnectionString"], configuration["ServicesBus:Train:TopicName"]);
             });
+
+            DomainEvents.FighterTransferredToHospital.Register(async fighter =>
+            {
+                var integrationEvent = new FighterTransferredToHospitalIntegrationEvent(fighter.Id,
+                                                                                    fighter.Name,
+                                                                                    fighter.Sex,
+                                                                                    fighter.DateOfBirth);
+
+                await PublishIntegrationEventAsync(integrationEvent, configuration["ServicesBus:ConnectionString"], configuration["ServicesBus:Transfer:TopicName"]);
+            });
         }
 
         public async Task<Fighter> HandleCommandAsync(CreateFighterCommand command, CancellationToken cancellationToken = default)
