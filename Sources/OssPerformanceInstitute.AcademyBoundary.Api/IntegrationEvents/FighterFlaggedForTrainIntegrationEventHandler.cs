@@ -7,16 +7,16 @@ using OssPerformanceInstitute.AcademyBoundary.Domain.ValueObjects.FighterClientE
 
 namespace OssPerformanceInstitute.AcademyBoundary.Api.IntegrationEvents
 {
-    public class FighterFlagedForTrainIntegrationEventHandler : BackgroundService
+    public class FighterFlaggedForTrainIntegrationEventHandler : BackgroundService
     {
         private readonly IServiceScopeFactory _serviceScopeFactory;
-        private readonly ILogger<FighterFlagedForTrainIntegrationEventHandler> _logger;
+        private readonly ILogger<FighterFlaggedForTrainIntegrationEventHandler> _logger;
         private readonly ServiceBusClient _serviceBusClient;
         private readonly ServiceBusProcessor _serviceBusProcessor;
 
-        public FighterFlagedForTrainIntegrationEventHandler(IConfiguration configuration,
+        public FighterFlaggedForTrainIntegrationEventHandler(IConfiguration configuration,
                                                             IServiceScopeFactory serviceScopeFactory,
-                                                            ILogger<FighterFlagedForTrainIntegrationEventHandler> logger)
+                                                            ILogger<FighterFlaggedForTrainIntegrationEventHandler> logger)
         {
             this._serviceScopeFactory = serviceScopeFactory ?? throw new ArgumentNullException(nameof(serviceScopeFactory));
             this._logger = logger ?? throw new ArgumentNullException(nameof(logger));

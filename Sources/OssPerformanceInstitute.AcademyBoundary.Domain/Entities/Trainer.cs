@@ -32,7 +32,7 @@ namespace OssPerformanceInstitute.AcademyBoundary.Domain.Entities
         public void RequestToTraining(FighterClientId fighterId)
         {
             ValidateStateForTrain();
-            DomainEvents.TrainingRequestCreated.Publish(new TrainingRequestCreated(fighterId, Id));
+            DomainEvents.TrainingRequestCreated.Publish(new TrainingRequestCreated(fighterId.Value, Id));
 
         }
 

@@ -23,7 +23,7 @@ namespace OssPerformanceInstitute.AcademyBoundary.Api.Application
             {
                 using var scope = serviceScopeFactory.CreateScope();
                 var fighterClientRepository = scope.ServiceProvider.GetRequiredService<IFighterClientRepository>();
-                var fighterClient = await fighterClientRepository.GetByIdAsync(FighterClientId.Create(request.FighterClientId));
+                var fighterClient = await fighterClientRepository.GetByIdAsync(FighterClientId.Create(request.FighterClientId).Value);
                 if(fighterClient!=null)
                 {
                     fighterClient.RequestToTrain(TrainerId.Create(request.TrainerId));
@@ -60,7 +60,7 @@ namespace OssPerformanceInstitute.AcademyBoundary.Api.Application
 
             try
             {
-                var trainer = await _trainerRepository.GetByIdAsync(TrainerId.Create(command.TrainerId));
+                var trainer = await _trainerRepository.GetByIdAsync(TrainerId.Create(command.TrainerId).Value);
                 if (trainer == null)
                     throw new TrainerNotFoundExeption(command.TrainerId);
 

@@ -45,6 +45,8 @@ namespace OssPerformanceInstitute.AcademyBoundary.Api.Infrastructure
             {
                 add.Property(p => p.Value).HasColumnName("trainer_id");
             });
+            modelBuilder.Entity<FighterClient>().Property(t => t.TrainingStatus)
+                                                    .HasColumnName("training_status");
 
             modelBuilder.Entity<FighterFlaggedForTrainIntegrationEvent>().ToTable("t_fighter_client_metadata");
             modelBuilder.Entity<FighterFlaggedForTrainIntegrationEvent>().HasKey(t => t.Id);

@@ -6,7 +6,7 @@ namespace OssPerformanceInstitute.AcademyBoundary.Domain.ValueObjects.TrainerEnt
     public record TrainerName
     {
         [Column("name")]
-        public string Value { get; init; }
+        public string? Value { get; init; }
 
         internal TrainerName(string value)
         {
