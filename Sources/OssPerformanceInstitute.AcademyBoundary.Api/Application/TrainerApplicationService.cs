@@ -32,7 +32,7 @@ namespace OssPerformanceInstitute.AcademyBoundary.Api.Application
             });
         }
 
-        public async Task<Trainer> HandleCommandAsync(CreateTrainerCommand command)
+        public async Task<Trainer> HandleCommandAsync(CreateTrainerCommand command, CancellationToken cancellationToken = default)
         {
             try
             {
@@ -45,7 +45,7 @@ namespace OssPerformanceInstitute.AcademyBoundary.Api.Application
                     command.Questionnaire.IsKickBoxingTrainner,
                     command.Questionnaire.IsMmaTrainner));
 
-                return await _trainerRepository.AddAsync(trainer);
+                return await _trainerRepository.AddAsync(trainer, cancellationToken);
             }
             catch (Exception ex)
             {
@@ -55,12 +55,12 @@ namespace OssPerformanceInstitute.AcademyBoundary.Api.Application
             }
         }
 
-        public async Task HandleCommandAsync(RequestTrainingCommand command)
+        public async Task HandleCommandAsync(RequestTrainingCommand command, CancellationToken cancellationToken = default)
         {
 
             try
             {
-                var trainer = await _trainerRepository.GetByIdAsync(TrainerId.Create(command.TrainerId).Value);
+                var trainer = await _trainerRepository.GetByIdAsync(command.TrainerId, cancellationToken);
                 if (trainer == null)
                     throw new TrainerNotFoundExeption(command.TrainerId);
 

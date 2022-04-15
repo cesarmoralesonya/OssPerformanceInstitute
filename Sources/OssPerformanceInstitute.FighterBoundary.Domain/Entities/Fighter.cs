@@ -49,7 +49,7 @@ namespace OssPerformanceInstitute.FighterBoundary.Domain.Entities
         public void TransferToHospital()
         {
             ValidateStateForTransfer();
-            DomainEvents.FighterTransferredToHospital.Publish(new FighterTransferredToHospital(Id, Name, Citizenship.Country, Citizenship.City, SexOfFighter, DateOfBirth));
+            DomainEvents.FighterTransferredToHospital.Publish(new FighterTransferredToHospital(Id, Name, SexOfFighter, DateOfBirth));
         }
 
         private void ValidateStateForTrain()

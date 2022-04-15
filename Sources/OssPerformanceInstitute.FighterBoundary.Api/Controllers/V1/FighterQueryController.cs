@@ -28,16 +28,16 @@ namespace OssPerformanceInstitute.FighterBoundary.Api.Controllers.V1
 
             try
             {
-                string query = @"SELECT TOP (1000) F.[pk_fighter_id] AS fighterid
-                                                  ,F.[name] 
-                                                  ,F.[country]
-                                                  ,F.[city]
+                string query = @"SELECT TOP (1000) F.[pk_fighter_id] AS fighterId
+                                                  ,F.[name]  AS name
+                                                  ,F.[country] AS country
+                                                  ,F.[city] AS city
                                                   ,[sex] = 
 	                                              CASE F.[sex]
 		                                            WHEN 0 THEN 'Male'
 		                                            WHEN 1 THEN 'Famele'
 	                                              END
-                                                  ,F.[date_birth] AS datebirth
+                                                  ,F.[date_birth] AS dateOfBirth
                                               FROM [Fighter].[dbo].[t_fighter] AS F";
 
                 using var connection = new SqlConnection(_configuration.GetConnectionString("Fighter"));

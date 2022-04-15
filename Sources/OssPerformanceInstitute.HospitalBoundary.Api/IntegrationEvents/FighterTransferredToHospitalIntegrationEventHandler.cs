@@ -50,15 +50,14 @@ namespace OssPerformanceInstitute.HospitalBoundary.Api.IntegrationEvents
 
             var existingPatient = await dbContext.PatientsMetadata.FindAsync(theEvent?.Id);
 
-#nullable disable
+
             if (existingPatient == null)
             {
-                dbContext.PatientsMetadata.Add(theEvent);
+                dbContext.PatientsMetadata.Add(theEvent!);
                 await dbContext.SaveChangesAsync();
             }
 
-            var patientId = PatientId.Create(theEvent.Id);
-#nullable disable
+            var patientId = PatientId.Create(theEvent!.Id);
 
             var patient = new Patient(patientId);
             await _patientAggregateStore.SaveAsync(patient);

@@ -89,5 +89,20 @@ namespace OssPerformanceInstitute.FighterBoundary.Api.Application
                 throw;
             }
         }
+
+        public async Task HandleCommandAsync(TransferToHospitalCommand command, CancellationToken cancellationToken = default)
+        {
+            try
+            {
+                var fighter = await _fighterRepository.GetByIdAsync(command.Id, cancellationToken);
+                fighter?.TransferToHospital();
+            }
+            catch (Exception ex)
+            {
+                var errorMessage = $"{GetType().Name} {MethodBase.GetCurrentMethod()?.Name} Ex: {(ex.InnerException ?? ex).Message}";
+                _logger.LogError(errorMessage);
+                throw;
+            }
+        }
     }
 }

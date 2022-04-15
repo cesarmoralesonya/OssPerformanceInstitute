@@ -45,11 +45,9 @@ namespace OssPerformanceInstitute.AcademyBoundary.Api.IntegrationEvents
 
             using var scope = _serviceScopeFactory.CreateScope();
             var dbContext = scope.ServiceProvider.GetRequiredService<AcademyDbContext>();
-#nullable disable
-            dbContext.FighterClientsMetadata.Add(theEvent);
-#nullable disable
+            dbContext.FighterClientsMetadata.Add(theEvent!);
             var FighterClientRepository = scope.ServiceProvider.GetRequiredService<IFighterClientRepository>();
-            var fighterClient = new FighterClient(FighterClientId.Create(theEvent.Id));
+            var fighterClient = new FighterClient(FighterClientId.Create(theEvent!.Id));
             await FighterClientRepository.AddAsync(fighterClient);
         }
 

@@ -2,5 +2,5 @@
 
 namespace OssPerformanceInstitute.FighterBoundary.Domain.Events
 {
-    public record FighterTransferredToHospital(Guid Id, string Name, string Country, string City, int Sex, DateTime DateOfBirth) : IDomainEvent { }
+    public record FighterTransferredToHospital(Guid Id, string Name, int Sex, DateTime DateOfBirth) : IDomainEvent { }
 }

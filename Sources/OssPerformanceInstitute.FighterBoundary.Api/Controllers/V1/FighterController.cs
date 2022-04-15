@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using OssPerformanceInstitute.FighterBoundary.Api.Application;
 using OssPerformanceInstitute.FighterBoundary.Api.Commands;
+using OssPerformanceInstitute.FighterBoundary.Api.Dtos;
 using System.Reflection;
 
 namespace OssPerformanceInstitute.FighterBoundary.Api.Controllers.V1
@@ -24,8 +25,9 @@ namespace OssPerformanceInstitute.FighterBoundary.Api.Controllers.V1
         {
             try
             {
-                var result = await _fighterApplicationService.HandleCommandAsync(command);
-                return Ok(result);
+                var fighter = await _fighterApplicationService.HandleCommandAsync(command);
+
+                return Ok(new FighterResponse(fighter.Id, fighter.Name, fighter.Citizenship.Country, fighter.Citizenship.City, fighter.SexOfFighter, fighter.DateOfBirth));
             }
             catch (Exception ex)
             {
@@ -38,6 +40,23 @@ namespace OssPerformanceInstitute.FighterBoundary.Api.Controllers.V1
         [MapToApiVersion("1.0")]
         [HttpPost("flagfortrain")]
         public async Task<IActionResult> Post(FlagForTrainCommand command)
+        {
+            try
+            {
+                await _fighterApplicationService.HandleCommandAsync(command);
+                return Ok();
+            }
+            catch (Exception ex)
+            {
+                var errorMessage = $"{GetType().Name} {MethodBase.GetCurrentMethod()?.Name} Ex: {(ex.InnerException ?? ex).Message}";
+                _logger.LogError(errorMessage);
+                return BadRequest(errorMessage);
+            }
+        }
+
+        [MapToApiVersion("1.0")]
+        [HttpPost("trasnfertohospital")]
+        public async Task<IActionResult> Post(TransferToHospitalCommand command)
         {
             try
             {
