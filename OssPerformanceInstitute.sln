@@ -31,7 +31,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OssPerformanceInstitute.Hos
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OssPerformanceInstitute.HospitalBoundary.Api", "Sources\OssPerformanceInstitute.HospitalBoundary.Api\OssPerformanceInstitute.HospitalBoundary.Api.csproj", "{0EE4FE3A-05E4-4F26-826A-EC3780DF0D1F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OssPerformanceInstitute.AcademyBoundary.QueryApi", "Sources\OssPerformanceInstitute.AcademyBoundary.QueryApi\OssPerformanceInstitute.AcademyBoundary.QueryApi.csproj", "{3137CDF7-9474-4EBD-A653-73D55257CA99}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OssPerformanceInstitute.AcademyBoundary.QueryApi", "Sources\OssPerformanceInstitute.AcademyBoundary.QueryApi\OssPerformanceInstitute.AcademyBoundary.QueryApi.csproj", "{3137CDF7-9474-4EBD-A653-73D55257CA99}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OssPerformanceInstitute.HospitalBoundary.Projector", "Sources\OssPerformanceInstitute.HospitalBoundary.Projector\OssPerformanceInstitute.HospitalBoundary.Projector.csproj", "{E2CB2001-FBB8-4C7D-89C0-88E0462019A4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -83,6 +85,10 @@ Global
 		{3137CDF7-9474-4EBD-A653-73D55257CA99}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3137CDF7-9474-4EBD-A653-73D55257CA99}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3137CDF7-9474-4EBD-A653-73D55257CA99}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E2CB2001-FBB8-4C7D-89C0-88E0462019A4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E2CB2001-FBB8-4C7D-89C0-88E0462019A4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E2CB2001-FBB8-4C7D-89C0-88E0462019A4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E2CB2001-FBB8-4C7D-89C0-88E0462019A4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -99,6 +105,7 @@ Global
 		{9B2F28C4-96A3-4ABD-8A5C-2F8373ECF1EF} = {7BB83EEE-1849-4A2B-8585-8C63694F9640}
 		{0EE4FE3A-05E4-4F26-826A-EC3780DF0D1F} = {7BB83EEE-1849-4A2B-8585-8C63694F9640}
 		{3137CDF7-9474-4EBD-A653-73D55257CA99} = {EBBBA861-1F33-492C-A726-6C96B7A37D9B}
+		{E2CB2001-FBB8-4C7D-89C0-88E0462019A4} = {7BB83EEE-1849-4A2B-8585-8C63694F9640}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {8C61201F-26C0-44EC-98D8-5380254139FB}

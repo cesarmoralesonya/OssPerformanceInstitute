@@ -67,9 +67,7 @@ namespace OssPerformanceInstitute.HospitalBoundary.Infrastructure.Repositories
 
             var aggregate = new Patient();
 
-#nullable disable
-            aggregate.Load(domainEvents);
-#nullable disable
+            aggregate.Load(domainEvents!);
 
             return aggregate;
         }
