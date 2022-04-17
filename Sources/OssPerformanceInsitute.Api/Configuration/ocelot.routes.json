@@ -1,0 +1,34 @@
+{
+  "Routes": [
+    {
+      "DownstreamPathTemplate": "/api/{everything}",
+      "ServiceName": "Fighter.Api",
+      "UpstreamPathTemplate": "/fighter.api/api/{everything}",
+      "UpstreamHttpMethod": [ "Post", "Get" ],
+      "SwaggerKey": "Fighter.Api"
+    },
+    {
+      "DownstreamPathTemplate": "/api/{everything}",
+      "ServiceName": "Academy.Api",
+      "DownstreamHttpMethod": "Post",
+      "UpstreamPathTemplate": "/academy.api/api/{everything}",
+      "UpstreamHttpMethod": [ "Post" ],
+      "SwaggerKey": "Academy.Api"
+    },
+    {
+      "DownstreamPathTemplate": "/api/{everything}",
+      "ServiceName": "AcademyQuery.Api",
+      "DownstreamHttpMethod": "Get",
+      "UpstreamPathTemplate": "/academyquery.api/api/{everything}",
+      "UpstreamHttpMethod": [ "Get" ],
+      "SwaggerKey": "AcademyQuery.Api"
+    },
+    {
+      "DownstreamPathTemplate": "/api/{everything}",
+      "ServiceName": "Hospital.Api",
+      "UpstreamPathTemplate": "/hospital.api/api/{everything}",
+      "UpstreamHttpMethod": [ "Post","Get" ],
+      "SwaggerKey": "Hospital.Api"
+    }
+  ]
+}

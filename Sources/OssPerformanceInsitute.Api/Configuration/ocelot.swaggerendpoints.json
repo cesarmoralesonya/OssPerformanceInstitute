@@ -1,0 +1,64 @@
+{
+  "SwaggerEndPoints": [
+    {
+      "Key": "Fighter.Api",
+      "Config": [
+        {
+          "Name": "Fighter API",
+          "Version": "v1",
+          "Service": {
+            "Name": "Fighter.Api",
+            "Path": "/swagger/v1/swagger.json"
+          }
+        },
+        {
+          "Name": "Fighter API",
+          "Version": "v2",
+          "Service": {
+            "Name": "Fighter.Api",
+            "Path": "/swagger/v2/swagger.json"
+          }
+        }
+      ]
+    },
+    {
+      "Key": "Academy.Api",
+      "Config": [
+        {
+          "Name": "Academy API",
+          "Version": "v1",
+          "Service": {
+            "Name": "Academy.Api",
+            "Path": "/swagger/v1/swagger.json"
+          }
+        }
+      ]
+    },
+    {
+      "Key": "AcademyQuery.Api",
+      "Config": [
+        {
+          "Name": "Academy Query API",
+          "Version": "v1",
+          "Service": {
+            "Name": "AcademyQuery.Api",
+            "Path": "/swagger/v1/swagger.json"
+          }
+        }
+      ]
+    },
+    {
+      "Key": "Hospital.Api",
+      "Config": [
+        {
+          "Name": "Hospital API",
+          "Version": "v1",
+          "Service": {
+            "Name": "Hospital.Api",
+            "Path": "/swagger/v1/swagger.json"
+          }
+        }
+      ]
+    }
+  ]
+}
