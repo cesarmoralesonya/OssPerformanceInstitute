@@ -11,35 +11,35 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "FighterBoundary", "FighterB
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SharedKernel", "SharedKernel", "{58C7D8C0-5CE9-4045-A263-F8C3F7216901}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OssPerformanceInstitute.SharedKernel.Common", "Sources\OssPerformanceInstitute.SharedKernel.Common\OssPerformanceInstitute.SharedKernel.Common.csproj", "{2718D605-082C-426B-830F-05934A097D4E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OssPerformanceInstitute.SharedKernel.Common", "OssPerformanceInstitute.SharedKernel.Common\OssPerformanceInstitute.SharedKernel.Common.csproj", "{2718D605-082C-426B-830F-05934A097D4E}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OssPerformanceInstitute.SharedKernel.Domain", "Sources\OssPerformanceInstitute.SharedKernel.Domain\OssPerformanceInstitute.SharedKernel.Domain.csproj", "{4D9F2D13-8A6D-4368-93F1-156D2F9D3EC7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OssPerformanceInstitute.SharedKernel.Domain", "OssPerformanceInstitute.SharedKernel.Domain\OssPerformanceInstitute.SharedKernel.Domain.csproj", "{4D9F2D13-8A6D-4368-93F1-156D2F9D3EC7}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OssPerformanceInstitute.SharedKernel.Infrastructure", "Sources\OssPerformanceInstitute.SharedKernel.Infrastructure\OssPerformanceInstitute.SharedKernel.Infrastructure.csproj", "{736E380D-DC76-4B1E-BF74-3798EFCAF2D5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OssPerformanceInstitute.SharedKernel.Infrastructure", "OssPerformanceInstitute.SharedKernel.Infrastructure\OssPerformanceInstitute.SharedKernel.Infrastructure.csproj", "{736E380D-DC76-4B1E-BF74-3798EFCAF2D5}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OssPerformanceInstitute.AcademyBoundary.Domain", "Sources\OssPerformanceInstitute.AcademyBoundary.Domain\OssPerformanceInstitute.AcademyBoundary.Domain.csproj", "{785B7E1C-5ADF-4023-80D8-66A52AB36B44}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OssPerformanceInstitute.AcademyBoundary.Domain", "OssPerformanceInstitute.AcademyBoundary.Domain\OssPerformanceInstitute.AcademyBoundary.Domain.csproj", "{785B7E1C-5ADF-4023-80D8-66A52AB36B44}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OssPerformanceInstitute.AcademyBoundary.Api", "Sources\OssPerformanceInstitute.AcademyBoundary.Api\OssPerformanceInstitute.AcademyBoundary.Api.csproj", "{2E335206-9257-4AEA-9AC6-143FCBE9C788}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OssPerformanceInstitute.AcademyBoundary.Api", "OssPerformanceInstitute.AcademyBoundary.Api\OssPerformanceInstitute.AcademyBoundary.Api.csproj", "{2E335206-9257-4AEA-9AC6-143FCBE9C788}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OssPerformanceInstitute.FighterBoundary.Domain", "Sources\OssPerformanceInstitute.FighterBoundary.Domain\OssPerformanceInstitute.FighterBoundary.Domain.csproj", "{2FC81E29-34A7-4CAA-ABE0-197F6C1E6A4A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OssPerformanceInstitute.FighterBoundary.Domain", "OssPerformanceInstitute.FighterBoundary.Domain\OssPerformanceInstitute.FighterBoundary.Domain.csproj", "{2FC81E29-34A7-4CAA-ABE0-197F6C1E6A4A}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OssPerformanceInstitute.FighterBoundary.Api", "Sources\OssPerformanceInstitute.FighterBoundary.Api\OssPerformanceInstitute.FighterBoundary.Api.csproj", "{11DEB85C-257E-4A7F-96C0-0F4E93CCD4E5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OssPerformanceInstitute.FighterBoundary.Api", "OssPerformanceInstitute.FighterBoundary.Api\OssPerformanceInstitute.FighterBoundary.Api.csproj", "{11DEB85C-257E-4A7F-96C0-0F4E93CCD4E5}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OssPerformanceInstitute.HospitalBoundary.Domain", "Sources\OssPerformanceInstitute.HospitalBoundary.Domain\OssPerformanceInstitute.HospitalBoundary.Domain.csproj", "{06C9D91E-2F25-4225-A2AD-A22B18647760}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OssPerformanceInstitute.HospitalBoundary.Domain", "OssPerformanceInstitute.HospitalBoundary.Domain\OssPerformanceInstitute.HospitalBoundary.Domain.csproj", "{06C9D91E-2F25-4225-A2AD-A22B18647760}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OssPerformanceInstitute.HospitalBoundary.Infrastructure", "Sources\OssPerformanceInstitute.HospitalBoundary.Infrastructure\OssPerformanceInstitute.HospitalBoundary.Infrastructure.csproj", "{9B2F28C4-96A3-4ABD-8A5C-2F8373ECF1EF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OssPerformanceInstitute.HospitalBoundary.Infrastructure", "OssPerformanceInstitute.HospitalBoundary.Infrastructure\OssPerformanceInstitute.HospitalBoundary.Infrastructure.csproj", "{9B2F28C4-96A3-4ABD-8A5C-2F8373ECF1EF}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OssPerformanceInstitute.HospitalBoundary.Api", "Sources\OssPerformanceInstitute.HospitalBoundary.Api\OssPerformanceInstitute.HospitalBoundary.Api.csproj", "{0EE4FE3A-05E4-4F26-826A-EC3780DF0D1F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OssPerformanceInstitute.HospitalBoundary.Api", "OssPerformanceInstitute.HospitalBoundary.Api\OssPerformanceInstitute.HospitalBoundary.Api.csproj", "{0EE4FE3A-05E4-4F26-826A-EC3780DF0D1F}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OssPerformanceInstitute.AcademyBoundary.QueryApi", "Sources\OssPerformanceInstitute.AcademyBoundary.QueryApi\OssPerformanceInstitute.AcademyBoundary.QueryApi.csproj", "{3137CDF7-9474-4EBD-A653-73D55257CA99}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OssPerformanceInstitute.AcademyBoundary.QueryApi", "OssPerformanceInstitute.AcademyBoundary.QueryApi\OssPerformanceInstitute.AcademyBoundary.QueryApi.csproj", "{3137CDF7-9474-4EBD-A653-73D55257CA99}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OssPerformanceInstitute.HospitalBoundary.Projector", "Sources\OssPerformanceInstitute.HospitalBoundary.Projector\OssPerformanceInstitute.HospitalBoundary.Projector.csproj", "{E2CB2001-FBB8-4C7D-89C0-88E0462019A4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OssPerformanceInstitute.HospitalBoundary.Projector", "OssPerformanceInstitute.HospitalBoundary.Projector\OssPerformanceInstitute.HospitalBoundary.Projector.csproj", "{E2CB2001-FBB8-4C7D-89C0-88E0462019A4}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Gateways", "Gateways", "{8D0F896F-C1B8-4DC1-8C9B-FAD63F90F800}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{E81AD0F0-0949-446D-BAF8-FEC7F4FF039C}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OssPerformanceInsitute.Api", "Sources\OssPerformanceInsitute.Api\OssPerformanceInsitute.Api.csproj", "{3C462573-EE4F-4470-9117-A64E4E0E6FB3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OssPerformanceInsitute.Api", "OssPerformanceInsitute.Api\OssPerformanceInsitute.Api.csproj", "{3C462573-EE4F-4470-9117-A64E4E0E6FB3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
